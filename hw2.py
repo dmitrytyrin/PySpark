@@ -66,28 +66,17 @@ if __name__ == "__main__":
         .show()
 
     pp('4.lat')
-
     df = crimeFacts.select('DISTRICT', 'Lat')
-
     df = df\
         .groupby('DISTRICT')\
         .agg(avg('Lat'))\
         .show()
 
     pp('5.lng')
-
     df = crimeFacts.select('DISTRICT', 'Long')
-
     df = df\
         .groupby('DISTRICT')\
         .agg(avg('Long'))\
         .show()
 
     spark.stop()
-
-
-
-
-
-
-
